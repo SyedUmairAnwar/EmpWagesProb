@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+
 public class EmpWages {
 
 	public static void main(String[] args) {
@@ -10,15 +11,17 @@ public class EmpWages {
 	int Part_Day_Hour=4;
 	int checkout=(int) (Math.floor(Math.random() *10) %3);
 	System.out.println(checkout);
-	if (checkout == fullTime) {
-		int Total_Wages=Wages_Per_Hour * full_Day_Hour;
-		System.out.println(Total_Wages);
+	switch(checkout){
+		case 1 :int total=Wages_Per_Hour * full_Day_Hour;
+							System.out.println(total);
+							break;
+		case 2 :int total1=Wages_Per_Hour * Part_Day_Hour;
+							System.out.println(total1);
+							break;
+		default : System.out.println("0");
 	}
-	else if (partTime == checkout) {
-		int total=Part_Day_Hour * Wages_Per_Hour;
-		System.out.println(total);
+						
 	}
-		
 	}
 
-}
+
